@@ -2,7 +2,7 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Basket from './components/Cart';
 import data from './data';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 function App() {
   const { products } = data;
   const [cartItems, setCartItems] = useState([]);
@@ -30,6 +30,17 @@ function App() {
       );
     }
   };
+  useEffect(() => {
+    const dataCart = JSON.parse(localStorage.getItem('dataCart')
+    )
+    if (dataCart) {
+      setCartItems(dataCart)
+    }
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('dataCart', JSON.stringify(cartItems))
+  }, [cartItems])
   return (
     <div className="App">
       <Header countCartItems={cartItems.length}></Header>

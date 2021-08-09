@@ -1,7 +1,13 @@
 
-
 body {
-  font-family: 'Helvetica';
+  
+}
+#root{
+  
+  font-family: 'Architects Daughter', cursive;
+}
+header{
+  font-size: 18px;
 }
 h1,
 h2,
@@ -58,12 +64,12 @@ button.btn {
   margin: 0.7rem 0;
   border-radius: 0.5rem;
   border: 0.1rem #404040 solid;
-  background-color: #f0c040;
+  background-color: #afaca5;
   width: 100%;
   cursor: pointer;
 }
 button.btn:hover{
-  background-color: #f0ce6f;
+  background-color: #333331;
 }
 button.btnModal{
   font-size: 0.8rem;
@@ -71,13 +77,13 @@ button.btnModal{
   margin: 0.7rem 0,2rem;
   border-radius: 0.5rem;
   border: 0.1rem #404040 solid;
-  background-color: #f0c040;
+  background-color: #dcdad6;
   width: 15%;
   cursor: pointer;
   color: white;
 }
 button.btnModal:hover{
-  background-color: #f0ce6f;
+  background-color: #333331;
 }
 
 button.add {
@@ -105,4 +111,30 @@ button.badge {
   border: none;
   color: #ffffff;
   width: 1.5rem;
+}
+
+/* WHATSAPP */
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#bfc2c0;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+.float:hover {
+	text-decoration: none;
+	color: #25d366;
+  background-color:#fff;
+}
+
+.my-float{
+	margin-top:16px;
 }

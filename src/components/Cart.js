@@ -4,8 +4,9 @@ export default function Basket(props) {
     const { cartItems, onAdd, onRemove } = props;
     const itemsPrice = cartItems.reduce((a, c) => a + c.qty * c.price, 0);
     const taxPrice = itemsPrice * 0.14;
-    const shippingPrice = itemsPrice > 2000 ? 0 : 20;
+    const shippingPrice = itemsPrice > 1000 ? 0 : 20;
     const totalPrice = itemsPrice + taxPrice + shippingPrice;
+    
     return (
         <aside >
             {/* // Modal */}
@@ -24,10 +25,10 @@ export default function Basket(props) {
                                         <div className="col-4 fs-4">{item.name}</div>
                                         <div className="col-4 d-flex">
                                             <button onClick={() => onRemove(item)} className="remove">
-                                                DEL
+                                                -
                                             </button>{' '}
                                             <button onClick={() => onAdd(item)} className="add text-white">
-                                                +
+                                            +
                                             </button>
                                         </div>
 
@@ -72,8 +73,8 @@ export default function Basket(props) {
                             </div>
                         </div>
                         <div class="modal-footer d-flex">
-                            <button type="button" class="btnModal btn-secondary w-25" data-bs-dismiss="modal">Close</button>
-                            <button class="btnModal w-25" onClick={() => alert('Implement Checkout!')}>Checkout</button>
+                            <button type="button" class="btnModal btn-secondary w-25" data-bs-dismiss="modal">Fermer</button>
+                            <button class="btnModal w-25" onClick={() => alert('App en construction! Je suis en vacances..')}>Acheter</button>
                         </div>
                     </div>
                 </div>
